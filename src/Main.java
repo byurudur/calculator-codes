@@ -23,11 +23,8 @@ public class Main {
         number1 = input.nextInt();
         System.out.println("Enter second number. ");
         number2 = input.nextInt();
-
-        // Check if the inputs are actually number.
-        boolean isNumber1 = true;
-        boolean isNumber2 = true;
-
+        // We can apply a try-catch method here to determine if they are real numbers, later.
+        //--------------------------------------------
         System.out.println("To sum: type 1");
         System.out.println("To extract: type 2");
         System.out.println("To divide: type 3");
@@ -46,22 +43,17 @@ public class Main {
                 break;
             case 3:
                 choice = 3;
-                if (number2 != 0){
+                if (number2 != 0 && number1 != 0){
                     System.out.println("Your answer is " + (number1 / number2));
-                    break;
-                }else {
+                }else if ( number1 != 0 && number2 == 0){
                     System.out.println("That's undefined.");
-                }
+                }else {
+                    System.out.println("That's uncertain.");
+                }break;
             case 4:
                 choice = 4;
                 System.out.println("Your answer is " + (number1 * number2));
                 break;
-            case 5:
-                if (number1 != 0 && number2 != 0){
-                    System.out.println(" ");
-                }else{
-                    System.out.println("This is uncertainity");
-                }
         }
     }
 }
