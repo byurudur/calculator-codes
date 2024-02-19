@@ -11,7 +11,7 @@ public class Main {
         Scanner input = new Scanner(System.in);
 
         // Determining the variables and types.
-        double answer, number1, number2;
+        double number1, number2;
         int choice;
 
         // Explain the code and collect inputs.
@@ -34,15 +34,12 @@ public class Main {
         // Switch - Case block for answer.
         switch (choice){
             case 1:
-                choice = 1;
                 System.out.println("Your answer is " + (number1 + number2));
                 break;
             case 2:
-                choice = 2;
                 System.out.println("Your answer is " + (number1 - number2));
                 break;
             case 3:
-                choice = 3;
                 if (number2 != 0 && number1 != 0){
                     System.out.println("Your answer is " + (number1 / number2));
                 }else if ( number1 != 0 && number2 == 0){
@@ -51,8 +48,10 @@ public class Main {
                     System.out.println("That's uncertain.");
                 }break;
             case 4:
-                choice = 4;
                 System.out.println("Your answer is " + (number1 * number2));
+                break;
+            default:
+                System.out.println("Invalid entry.");
                 break;
         }
     }
